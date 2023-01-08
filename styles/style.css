@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: black;
+}
+.container{
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header-toolbar{
+    padding:14px 0px;
+}
+.header-toolbar_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-toolbar_contacts{
+    display: flex;
+    list-style: none;
+}
+.header-toolbar_contacts .header-toolbar_contacts-item{
+    font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #969696;
+        position: relative;
+}
+
+.header-toolbar_contacts .header-toolbar_contacts-item .link{
+        color: #969696;
+        text-decoration: none;
+}
+.header-toolbar_contacts .header-toolbar_contacts-item .link.phone{
+    position: relative;
+    padding-left:30px;
+}
+.header-toolbar_contacts .header-toolbar_contacts-item .link.phone::before{
+    width:16px;
+    height: 16px;
+    display: block;
+    content: '';
+    position: absolute;
+    background: url(/assets/img/eva_phone-outline.png);
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-toolbar_contacts .header-toolbar_contacts-item:not(:last-child){
+    margin-right:30px;
+}
+.header-toolbar_contacts .header-toolbar_contacts-item:not(:last-child)::after{
+    display: block;
+    position: absolute;
+    content:'';
+    height: 75%;
+    width:.5px;
+    background: #969696;
+    right: -15px;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.header-toolbar_body .header-toolbar_user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-toolbar_body .header-toolbar_user .link{
+    font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        color: #969696;
+        text-decoration: none;
+        display: block;
+        position: relative;
+}
+.header-toolbar_body .header-toolbar_user .link:not(:last-child){
+    margin-right:15px;
+}
+.header-toolbar_body .header-toolbar_user .link:not(:last-child):after{
+    position: absolute;
+    display: block;
+    content: '/';
+    top: 0;
+    right: -10px;
+}
+.header-toolbar_body .header-toolbar_user .link.enter{
+    padding-left:20px;
+}
+.header-toolbar_body .header-toolbar_user .link.enter::before{
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left:0;
+    width: 14px;
+    height: 14px;
+    background: url(/assets/img/ic_sharp-log-in.png);
+    transform: translate(0%, -50%);
+}
